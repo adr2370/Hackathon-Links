@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+</br>
+<div class="row">
+	<div class="span8 offset4">
+		<h1>Hackathon Sites</h1>
+	</div>
+	<div class="span8 offset3">
+		<label for="delete" id="deleteLabel">Name:</label>
+		<input type="delete" id="delete" placeholder="Enter Link To Delete Here"/>
+	</div>
+	<div class="span2">
+		<span id="deleteButton">Delete</span>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<table class="tablesorter">
+			<thread>
+				<tr>
+					<th>Name</th>
+					<th>Link</th>
+					<th>Description</th>
+				</tr>
+			</thread>
+			<tbody>
+				<div id="websiteAdding">
+				<% @websites.reverse.each do |b| %>
+				<tr>
+					<td><%= b.name %></td>
+					<td><a href="<%= b.address %>" target="_blank"><%= b.address %></a></td>
+					<td><%= b.description %></td>
+				</tr>
+			    <% end %>
+				</div>
+			</tbody>
+		</table>
+	</div>
+</div>
